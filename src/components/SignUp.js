@@ -1,62 +1,60 @@
 import React from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import app from "../firebase/Firebase.init";
+
+const auth = getAuth(app);
 
 const SignUp = () => {
+  const handeSubmit = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    console.log(email, password);
+  };
+
   return (
-    <div>
-      <div className="flex flex-col w-full max-w-md p-12 space-y-4 text-center dark:bg-gray-900 dark:text-gray-100">
-        <h1 className="text-3xl font-semibold">Sign in to your account</h1>
-        <a className="text-sm dark:text-gray-400" href="/">
-          Or start your free trial
-        </a>
-        <form
-          novalidate=""
-          className="space-y-4 ng-untouched ng-pristine ng-valid"
-        >
-          <div className="flex flex-col">
-            <label for="email" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email"
-              type="email"
-              placeholder="Email address"
-              className="rounded-t-md dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2"
-            />
-            <label for="password" className="sr-only">
-              Password
-            </label>
-            <input
-              id="password"
-              type="text"
-              placeholder="Password"
-              className="-mt-1 rounded-b-md dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2"
-            />
-          </div>
-          <div className="flex justify-between">
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                name="remember"
-                id="remember"
-                aria-label="Remember me"
-                className="mr-1 rounded-sm focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2 accent-violet-400"
-              />
-              <label for="remember" className="text-sm dark:text-gray-400">
-                Remember me
-              </label>
-            </div>
-            <a className="text-sm dark:text-gray-400" href="/">
-              Forgot your password?
-            </a>
-          </div>
-          <button
-            type="button"
-            className="px-8 py-3 space-x-2 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"
-          >
-            Sign in
-          </button>
-        </form>
+    <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:dark:bg-gray-900 dark:dark:text-gray-100">
+      <div className="mb-8 text-center">
+        <h1 className="my-3 text-4xl font-bold">Sign in</h1>
+        <p className="text-sm dark:dark:text-gray-400">
+          Sign in to access your account
+        </p>
       </div>
+      <form
+        onSubmit={handeSubmit}
+        className="space-y-12 ng-untouched ng-pristine ng-valid"
+      >
+        <div className="space-y-4">
+          <div>
+            Email address
+            <input
+              type="email"
+              name="email"
+              placeholder="your mail"
+              className="w-full px-3 py-2 border rounded-md dark:dark:border-gray-700 dark:dark:bg-gray-900 dark:dark:text-gray-100"
+            />
+          </div>
+          <div>
+            <div className="flex justify-between mb-2">Password</div>
+            <input
+              type="password"
+              name="password"
+              placeholder="*****"
+              className="w-full px-3 py-2 border rounded-md dark:dark:border-gray-700 dark:dark:bg-gray-900 dark:dark:text-gray-100"
+            />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <div>
+            <button
+              type="submit"
+              className="w-full px-8 py-3 font-semibold rounded-md dark:dark:bg-violet-400 dark:dark:text-gray-900"
+            >
+              Sign in
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
   );
 };
