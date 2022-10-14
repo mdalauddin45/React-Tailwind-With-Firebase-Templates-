@@ -10,6 +10,14 @@ const SignUp = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     console.log(email, password);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
