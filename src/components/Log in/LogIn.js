@@ -6,12 +6,12 @@ function LogIn() {
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl  text-gray-900 border">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form
-          novalidate=""
+          noValidate=""
           action=""
           className="space-y-6 ng-untouched ng-pristine ng-valid"
         >
           <div className="space-y-1 text-sm">
-            <label for="username" className="block text-gray-900">
+            <label htmlFor="username" className="block text-gray-900">
               Username
             </label>
             <input
@@ -23,7 +23,7 @@ function LogIn() {
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label for="password" className="block text-gray-900">
+            <label htmlFor="password" className="block text-gray-900">
               Password
             </label>
             <input
