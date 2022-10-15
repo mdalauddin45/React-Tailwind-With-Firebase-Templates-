@@ -1,10 +1,17 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import SignUp from "./components/SignUp";
+import Main from "./components/layout/Main";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+    },
+  ]);
   return (
     <div>
-      <h1>hi</h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
