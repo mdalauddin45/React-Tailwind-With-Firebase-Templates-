@@ -40,7 +40,7 @@ const About = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?1"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 "
               />
               <p className="text-xl font-semibold leading-tight">
                 Distinctio Animi
@@ -78,7 +78,7 @@ const About = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?2"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 "
               />
               <p className="text-xl font-semibold leading-tight">
                 Distinctio Animi
@@ -116,7 +116,7 @@ const About = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?3"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500"
               />
               <p className="text-xl font-semibold leading-tight">
                 Distinctio Animi
@@ -154,7 +154,7 @@ const About = () => {
               <img
                 src="https://source.unsplash.com/50x50/?portrait?4"
                 alt=""
-                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 bg-gray-700"
+                className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full bg-gray-500 "
               />
               <p className="text-xl font-semibold leading-tight">
                 Distinctio Animi
