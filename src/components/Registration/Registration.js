@@ -6,11 +6,7 @@ function Registration() {
     <div className="flex justify-center m-10">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl  text-gray-900 border">
         <h1 className="text-2xl font-bold text-center">Registration</h1>
-        <form
-          noValidate=""
-          action=""
-          className="space-y-6 ng-untouched ng-pristine ng-valid"
-        >
+        <form className="space-y-6 ng-untouched ng-pristine ng-valid">
           <div className="space-y-1 text-sm">
             <input
               type="text"
@@ -31,13 +27,9 @@ function Registration() {
               required
             />
           </div>
-          <div className="flex justify-end text-xs text-gray-400">
-            <Link rel="noopener noreferrer" to="#">
-              Forgot Password?
-            </Link>
-          </div>
-          <button className="block w-full p-3 text-center rounded-sm font-bold text-gray-900 bg-violet-400">
-            Sign in
+
+          <button className="block w-full p-3 text-center rounded-sm font-bold text-white bg-violet-400">
+            Sign up
           </button>
         </form>
         <div className="flex items-center pt-4 space-x-1">
@@ -78,13 +70,13 @@ function Registration() {
         </div>
         <p className="text-xs text-center sm:px-6 text-gray-900">
           Don't have an account?
-          <a
+          <Link
             rel="noopener noreferrer"
-            href="/login"
+            to="/login"
             className="underline text-gray-900"
           >
             log in
-          </a>
+          </Link>
         </p>
       </div>
     </div>

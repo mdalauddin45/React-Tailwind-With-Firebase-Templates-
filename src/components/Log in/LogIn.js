@@ -6,20 +6,16 @@ function LogIn() {
     <div className="flex justify-center m-10">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl  text-gray-900 border">
         <h1 className="text-2xl font-bold text-center">Login</h1>
-        <form
-          noValidate=""
-          action=""
-          className="space-y-6 ng-untouched ng-pristine ng-valid"
-        >
+        <form className="space-y-6 ng-untouched ng-pristine ng-valid">
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block text-gray-900">
-              Username
+            <label htmlFor="email" className="block text-gray-900">
+              Email
             </label>
             <input
-              type="text"
-              name="username"
-              id="username"
-              placeholder="Username"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
               className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
             />
           </div>
@@ -35,9 +31,9 @@ function LogIn() {
               className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
             />
             <div className="flex justify-end text-xs text-gray-400">
-              <a rel="noopener noreferrer" href="#">
+              <Link rel="noopener noreferrer" to="#">
                 Forgot Password?
-              </a>
+              </Link>
             </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm text-white font-bold  bg-violet-400">
